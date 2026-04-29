@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@1,500;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-purple: #8b5cf6;
+  --color-dark-bg: #050505;
+  --color-dark-card: #111111;
+  --color-zinc-950: #09090b;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-dark-bg);
+    color: #f4f4f5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(23, 23, 23, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .card-gradient {
+    background: linear-gradient(145deg, #111111 0%, #080808 100%);
+  }
+  
+  .ai-glow {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+  }
+
+  .text-serif {
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
+
+  /* Hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
